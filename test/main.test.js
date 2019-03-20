@@ -1,9 +1,8 @@
 const path = require('path');
 require('dotenv').config({
-  path: path.resolve(__dirname, './.env'),
-  encoding: 'utf8'
+  path: path.resolve(__dirname, './.env')
 });
+const reversed = process.env.REVERSED;
 const reverseString = require('../index.js');
 const runTest = require('./run-test.js');
-
-runTest(reverseString(process.env.REVERSED));
+runTest(reverseString(reversed));
